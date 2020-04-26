@@ -14,5 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome');//resources\views\welcome.blade.php
 });
+
+
+Route::get('return_arr_test', function () {
+    $arr = array();
+    $arr['name'] = 'elesos';
+    $arr['age']  = 2020;
+    return $arr;
+});
+
+
+
+
+
