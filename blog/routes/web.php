@@ -29,3 +29,7 @@ Route::get('return_arr_test', function () {
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
