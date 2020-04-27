@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+//=========================================测试=========================================
 Route::get('/', function () {
     return view('welcome');//resources\views\welcome.blade.php
 });
@@ -26,10 +28,10 @@ Route::get('return_arr_test', function () {
 });
 
 
-
-
-
-
+//这2个路由是创建认证系统后自动生成的
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+//
+
+
+//==================================
