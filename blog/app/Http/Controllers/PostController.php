@@ -95,7 +95,7 @@ class PostController extends Controller
         $user = Auth::user();
         $user_name = $user->name;
 
-        Finance::where('id', $article_id)->update(['state' => 2, 'userid' => $user_name, 'tag_type' => $name]);
+        Post::where('id', $article_id)->update(['state' => 2, 'userid' => $user_name, 'tag_type' => $name]);
 
        // return $user_name.'hahaha:['.$name.']';
 
