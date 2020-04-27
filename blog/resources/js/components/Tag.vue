@@ -21,9 +21,8 @@
             process_click:function (name) {
                 console.log(name);
                 //axios.get('http://36.110.202.64:8080/get_me/'+name+'/'+this.article_id).then(response => console.log(response.data));
-                //页面重新加载
-                //axios.get('http://10.90.106.159/get_me/'+name+'/'+this.article_id).then(() => window.location.reload());
-                axios.get('http://123.103.93.74//get_me/'+name+'/'+this.article_id).then(() => window.location.reload());
+                //提交，并重新加载页面
+                axios.get('http://laravel.elesos.com/update_post/'+name+'/'+this.article_id).then(() => window.location.reload());
             },
             click_notice:function () {
                 //console.log('fffffffffffffffffffffff');

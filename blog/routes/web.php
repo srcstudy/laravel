@@ -38,3 +38,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 //添加认证路由， 给路由添加中间件auth
 //给路由命名，方便以后生成url或重定向
 Route::get('/post', 'PostController@article_auth')->middleware('auth')->name('finance_auth');
+//提交数据
+Route::get('/update_post/{name}/{article_id}', 'PostController@update_post');

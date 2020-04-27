@@ -86,4 +86,25 @@ class PostController extends Controller
 									 'tag_name_arr' => $result, 
 									 'user_datas' => $user_datas_arr] );
     }
+	
+	
+	
+	//name是分类名字
+    public function update_post(Request $request, $name, $article_id){
+        //$user_id = Auth::id();
+        $user = Auth::user();
+        $user_name = $user->name;
+
+        Finance::where('id', $article_id)->update(['state' => 2, 'userid' => $user_name, 'tag_type' => $name]);
+
+       // return $user_name.'hahaha:['.$name.']';
+
+
+
+        //return '['.$user_name.']-['.$article_id.']-['.$name.']';
+
+        //return redirect('/finance_auth'); //能返回页面，但是本页面不刷新
+
+
+    }
 }
