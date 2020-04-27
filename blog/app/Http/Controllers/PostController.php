@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
+use App\Finance;
+
+
 class PostController extends Controller
 {
     public  function article_auth(Request $request){
