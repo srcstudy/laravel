@@ -16,13 +16,9 @@
                             </div>
                         @endif
 
-
-
-						<h1><center>{{json_encode($modules)}}</center></h1>
-						
 					
-
-
+						<home-component :modules='@json($modules)'></home-component>
+					
 
                     </div>
                 </div>

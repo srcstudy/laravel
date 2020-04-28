@@ -39,6 +39,7 @@ Vue.use(ElementUI);
 
 Vue.component('tag-component',  require('./components/Tag').default);
 Vue.component('user-component',  require('./components/User').default);
+Vue.component('home-component',  require('./components/Home').default);
 
 
 new Vue({
