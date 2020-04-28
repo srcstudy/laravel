@@ -7,8 +7,8 @@
 		</el-row>
 		
         <el-steps :active="1" finish-status="success" simple style="margin-top: 20px">
-		    <el-step v-for="(value, name, index) in modules" title="{{value}}">
-			</el-step>		
+		    <el-step v-for="(value, name, index) in modules" v-bind:value="value" title="value">
+		    </el-step>		
 		</el-steps>
 
     </div>
