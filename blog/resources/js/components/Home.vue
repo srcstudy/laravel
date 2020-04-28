@@ -1,19 +1,15 @@
 <template>
     <div>
-        <el-steps finish-status="success" simple style="margin-top: 20px">
-		 
-		    <el-row>
-			<el-button v-for="(value, name, index) in modules" v-bind:value="name" @click="process_click(name)" type="success" plain>
-				{{name}}{{value}}
-			</el-button>
-			</el-row>
+		<el-row>		
+			<el-button v-for="(value, name, index) in modules" v-bind:value="value" @click="process_click(value)" type="success" plain>
+				{{value}}
+			</el-button>		
+		</el-row>
 		
-		
-		    <el-step v-for="(value, name, index) in modules" v-bind:title="test">
-			
-		</el-step>
-		
-		
+        <el-steps :active="1" finish-status="success" simple style="margin-top: 20px">
+		    <el-step v-for="(value, name, index) in modules" title="test">
+				{{value}}
+			</el-step>		
 		</el-steps>
 
     </div>
@@ -29,8 +25,8 @@
         props: ['modules'],
 
         methods:{
-            process_click:function (name) {
-                console.log(name);               
+            process_click:function (value) {
+                console.log(value);               
             }
 
 
