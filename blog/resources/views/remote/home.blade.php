@@ -18,8 +18,8 @@
 
 
 
-						<h1><center>{{$modules}}</center></h1>
-						<br />
+						<h1><center>{{json_encode($modules)}}</center></h1>
+						
 					
 
 

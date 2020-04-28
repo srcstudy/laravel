@@ -43,5 +43,5 @@ Route::get('/update_post/{name}/{article_id}', 'PostController@update_post');
 
 //远程主页
 Route::get('/remote', function (){
-    return view('remote.home', ['modules' => config('module.module_info.values')]);
+    return view('remote.home', ['modules' => explode(' ', config('module.module_info.values'))]);
 });

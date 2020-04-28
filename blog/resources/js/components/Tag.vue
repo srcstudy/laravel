@@ -2,7 +2,9 @@
     <div>
         <el-row>
 
-        <el-button v-for="(value, name, index) in my_data" v-bind:value="name" @click="process_click(name),click_notice()" type="success" plain>{{name}}{{value}}</el-button>
+        <el-button v-for="(value, name, index) in my_data" v-bind:value="name" @click="process_click(name),click_notice()" type="success" plain>
+			{{name}}{{value}}
+		</el-button>
         </el-row>
 
     </div>
