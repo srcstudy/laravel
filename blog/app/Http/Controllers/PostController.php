@@ -82,9 +82,9 @@ class PostController extends Controller
 		}
 	
 		return view('post', ['id'=> $article->id, 'title' => $article->title, 'content' => $article->content, 
-							         'username' => $user_name, 
-									 'tag_name_arr' => $result, 
-									 'user_datas' => $user_datas_arr] );
+							        'username'     => $user_name, 
+									'tag_name_arr' => $result, 
+									'user_datas'   => $user_datas_arr] );
     }
 	
 	

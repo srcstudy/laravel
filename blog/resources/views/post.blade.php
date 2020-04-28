@@ -17,7 +17,7 @@
                         @endif
 
 
-                        <user-component  :user_data='@json($user_datas)'></user-component>
+                        <user-component :user_data='@json($user_datas)'></user-component>
 
 						<h1><center>{{$id}}:{{$title}}</center></h1>
 						<br />

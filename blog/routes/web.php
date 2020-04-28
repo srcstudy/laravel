@@ -40,3 +40,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/post', 'PostController@article_auth')->middleware('auth')->name('finance_auth');
 //提交数据
 Route::get('/update_post/{name}/{article_id}', 'PostController@update_post');
+
+//远程主页
+Route::get('/remote', function (){
+    return view('remote.home', ['modules' => config('article.house_category_info.tag_names')]);
+});
