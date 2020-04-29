@@ -1,10 +1,17 @@
 <template>
     <div>
-		<el-row>		
-			<el-button v-for="(value, name, index) in modules" v-bind:value="value" @click="process_click(value)" type="success" plain>
-				{{value}}
-			</el-button>		
-		</el-row>
+		<el-menu
+		  :default-active="1"
+		  class="el-menu-nav"
+		  mode="horizontal"
+		  @select="handleSelect"
+		  background-color="#545c64"
+		  text-color="#fff"
+		  active-text-color="#ffd04b">
+				<el-menu-item index="1"><a href="http://laravel.elesos.com/remote/" target="_blank">远程工作机会</a></el-menu-item>
+				<el-menu-item index="2"><a href="http://laravel.elesos.com/remote/" target="_blank">远程视频面试</a></el-menu-item>
+			    <el-menu-item index="3"><a href="http://laravel.elesos.com/remote/" target="_blank">远程工作</a></el-menu-item>
+		</el-menu>
 		
         <el-steps :active="1" finish-status="success" simple style="margin-top: 20px">
 		    <el-step v-for="(value, name, index) in modules" v-bind:value="value" v-bind:title="value">
@@ -26,7 +33,10 @@
         methods:{
             process_click:function (value) {
                 console.log(value);               
-            }
+            },
+			handleSelect(key, keyPath) {
+				console.log(key, keyPath);
+			}
 
 
         }
